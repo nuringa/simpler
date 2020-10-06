@@ -5,8 +5,10 @@ class TestsController < Simpler::Controller
     @tests = Test.all
   end
 
-  def create
+  def create; end
 
+  def show
+    @test = Test.find(id: params[:id])
   end
 
 end
