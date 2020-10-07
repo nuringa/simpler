@@ -55,6 +55,10 @@ module Simpler
       @response.write(ERB.new(text).result(binding))
     end
 
+    def headers
+      @response
+    end
+
     def write_response
       body = render_body
 
