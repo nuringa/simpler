@@ -1,7 +1,6 @@
 class TestsController < Simpler::Controller
 
   def index
-    @time = Time.now
     @tests = Test.all
     status 201
   end
@@ -10,6 +9,7 @@ class TestsController < Simpler::Controller
 
   def show
     @test = Test.find(id: params[:id])
+    render inline: "<%= Time.now %>"
   end
 
 end
